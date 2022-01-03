@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float turnSpeed;
-    public float horisontalInput;
-    public float forwardInput;
+    private float speed = 5.0f;
+    private float turnSpeed = 10.0f;
+    private float horisontalInput;
+    private float forwardInput;
 
     // Start is called before the first frame update
     void Start()
