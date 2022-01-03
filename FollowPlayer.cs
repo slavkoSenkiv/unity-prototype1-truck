@@ -5,6 +5,14 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     public GameObject player;
+    // public int xOffset = 0;
+    // public int yOffset = 5;
+    // public int zOffset = -7;
+
+    //private Vector3 offset = new Vector3(xOffset, yOffset, zOffset);
+    private Vector3 offset = new Vector3(0, 5, -7);
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,8 +20,12 @@ public class FollowPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {   //adjust offset of the camera by adding to the camera coordinates
-        transform.position = player.transform.position + new Vector3(0, 5, -7);
+        //transform.position = player.transform.position + new Vector3(0, 5, -7);
+        //transform.position = player.transform.position + new Vector3(xOffset, yOffset, zOffset); //offset;
+        transform.position = player.transform.position + offset;
+
+
     }
 }
